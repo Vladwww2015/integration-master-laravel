@@ -4,12 +4,13 @@ namespace IntegrationHelper\IntegrationMasterLaravel\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use IntegrationHelper\IntegrationMaster\Model\IntegrationMasterExclusionInterface;
+use IntegrationHelper\IntegrationMasterLaravel\Contracts\IntegrationMasterExclusion as Contract;
 
 /**
  *
  */
-class IntegrationMasterExclusion extends Model implements IntegrationMasterExclusionInterface,
-    \IntegrationHelper\IntegrationMasterLaravel\Contracts\IntegrationMasterExclusion
+class IntegrationMasterExclusion extends Model implements IntegrationMasterExclusionInterface, Contract
+
 {
     public const TABLE = 'integration_master_exclusion';
 
