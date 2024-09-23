@@ -1,0 +1,26 @@
+{
+    "name": "integration-helpers/integration-master-laravel",
+    "description": "Integration Helper with Master Version Laravel",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "integration-helpers/integration-master": "*",
+        "konekt/concord": "^1.2",
+        "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.2",
+        "laravel/ui": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "IntegrationHelpers\\IntegrationMasterLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IntegrationHelpers\\IntegrationMasterLaravel\\Providers\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
