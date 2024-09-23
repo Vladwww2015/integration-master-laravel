@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "IntegrationHelpers\\IntegrationMasterLaravel\\": "src/"
+            "IntegrationHelper\\IntegrationMasterLaravel\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "IntegrationHelpers\\IntegrationMasterLaravel\\Providers\\ServiceProvider"
+                "IntegrationHelper\\IntegrationMasterLaravel\\Providers\\ServiceProvider"
             ]
         }
     },
