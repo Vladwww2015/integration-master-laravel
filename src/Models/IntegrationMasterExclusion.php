@@ -8,7 +8,8 @@ use IntegrationHelper\IntegrationMaster\Model\IntegrationMasterExclusionInterfac
 /**
  *
  */
-class IntegrationMasterExclusion extends Model implements IntegrationMasterExclusionInterface, \IntegrationHelper\IntegrationMasterLaravel\Contracts\IntegrationMasterExclusion
+class IntegrationMasterExclusion extends Model implements IntegrationMasterExclusionInterface,
+    \IntegrationHelper\IntegrationMasterLaravel\Contracts\IntegrationMasterExclusion
 {
     public const TABLE = 'integration_master_exclusion';
 

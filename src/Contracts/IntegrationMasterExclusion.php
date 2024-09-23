@@ -2,7 +2,7 @@
 
 namespace IntegrationHelper\IntegrationMasterLaravel\Contracts;
 
-interface IntegrationMasterException
+interface IntegrationMasterExclusion
 {
 
 }
