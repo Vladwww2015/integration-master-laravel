@@ -7,24 +7,24 @@ Route::group([
     'middleware' => ['web', 'admin']
 ], function () {
 
-    Route::get('', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterController::class, 'index'])
+    Route::get('', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterController::class, 'index'])
         ->defaults('_config', [
             'view' => 'integration-master::admin.index',
         ])->name('admin.integration.master.list');
 
-    Route::get('edit/{hash}', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterController::class, 'edit'])
+    Route::get('edit/{hash}', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterController::class, 'edit'])
         ->defaults('_config', [
             'view' => 'integration-master::admin.integration-master.edit',
         ])
         ->name('admin.integration.master.edit');
 
-    Route::delete('delete', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterController::class, 'delete'])
+    Route::delete('delete', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterController::class, 'delete'])
         ->name('admin.integration.master.delete');
 
-    Route::post('create', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterController::class, 'create'])
+    Route::post('create', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterController::class, 'create'])
         ->name('admin.integration.master.create');
 
-    Route::post('update', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterController::class, 'update'])
+    Route::post('update', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterController::class, 'update'])
         ->name('admin.integration.master.update');
 });
 
@@ -34,23 +34,23 @@ Route::group([
     'middleware' => ['web', 'admin']
 ], function () {
 
-    Route::get('', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'index'])
+    Route::get('', [\IntegrationHelper\IntegrationMasterLaravelHttp\Http\Controllers\Admin\IntegrationMasterExclusionController::class, 'index'])
         ->defaults('_config', [
             'view' => 'integration-master::admin.exclusion-index',
         ])->name('admin.integration.master.exclusion-list');
 
-    Route::get('edit/{hash}', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'edit'])
+    Route::get('edit/{hash}', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterExclusionController::class, 'edit'])
         ->defaults('_config', [
             'view' => 'integration-master::admin.integration-master.edit',
         ])
         ->name('admin.integration.master.edit-exclusion-list');
 
-    Route::delete('delete', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'delete'])
+    Route::delete('delete', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterExclusionController::class, 'delete'])
         ->name('admin.integration.master.delete-exclusion-list');
 
-    Route::post('create', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'create'])
+    Route::post('create', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterExclusionController::class, 'create'])
         ->name('admin.integration.master.create-exclusion-list');
 
-    Route::post('update', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'update'])
+    Route::post('update', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterExclusionController::class, 'update'])
         ->name('admin.integration.master.update-exclusion-list');
 });

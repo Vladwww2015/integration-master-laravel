@@ -1,6 +1,6 @@
 <?php
 
-namespace IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin;
+namespace IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;

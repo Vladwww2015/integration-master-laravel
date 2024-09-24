@@ -1,6 +1,6 @@
 <?php
 
-namespace IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin;
+namespace IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
