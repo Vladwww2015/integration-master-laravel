@@ -53,6 +53,10 @@ class IntegrationMasterController extends Controller
         return view($this->_config['view']);
     }
 
+    /**
+     * @param string $hash
+     * @return JsonResponse
+     */
     public function edit(string $hash)
     {
         $data = IntegrationMasterSerializator::decode($hash);

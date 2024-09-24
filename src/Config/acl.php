@@ -44,7 +44,7 @@ return [
     ],
     [
         'key'   => 'integration-master.exclusion-list.create-exclusion-list',
-        'name'  => 'Integration Master Only Create Exclusion List',
+        'name'  => 'Integration Master Create Exclusion List',
         'route' => 'admin.integration.master.create-exclusion-list',
         'sort'  => 10,
     ],[
@@ -59,8 +59,8 @@ return [
         'sort'  => 30,
     ],[
         'key'   => 'integration-master.exclusion-list.delete-exclusion-item',
-        'name'  => 'Integration Master Delete Exclusion Item',
-        'route' => 'admin.integration.master.delete-exclusion-item',
+        'name'  => 'Integration Master Edit Exclusion Item',
+        'route' => 'admin.integration.master.edit-exclusion-item',
         'sort'  => 40,
     ],[
         'key'   => 'integration-master.exclusion-list.save-exclusion-item',

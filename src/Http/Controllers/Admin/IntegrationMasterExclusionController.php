@@ -6,8 +6,8 @@ use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use IntegrationHelper\IntegrationMasterLaravel\Datagrids\IntegrationMasterGrid;
-use IntegrationHelper\IntegrationMasterLaravel\Repositories\IntegrationMasterRepository;
+use IntegrationHelper\IntegrationMasterLaravel\Datagrids\IntegrationMasterExclusionGrid;
+use IntegrationHelper\IntegrationMasterLaravel\Repositories\IntegrationMasterExclusionRepository;
 
 
 class IntegrationMasterExclusionController extends Controller
@@ -29,7 +29,7 @@ class IntegrationMasterExclusionController extends Controller
      * @return void
      */
     public function __construct(
-        protected IntegrationMasterRepository $repository
+        protected IntegrationMasterExclusionRepository $repository
     ) {
         $this->middleware('admin');
 
@@ -44,9 +44,24 @@ class IntegrationMasterExclusionController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            return app(IntegrationMasterGrid::class)->toJson();
+            return app(IntegrationMasterExclusionGrid::class)->toJson();
         }
 
         return view($this->_config['view']);
+    }
+
+    public function delete()
+    {
+
+    }
+
+    public function create()
+    {
+
+    }
+
+    public function update()
+    {
+
     }
 }

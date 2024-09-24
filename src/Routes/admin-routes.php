@@ -27,3 +27,30 @@ Route::group([
     Route::post('update', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterController::class, 'update'])
         ->name('admin.integration.master.update');
 });
+
+
+Route::group([
+    'prefix' => config('app.admin_url') . '/integration-master-exclusion',
+    'middleware' => ['web', 'admin']
+], function () {
+
+    Route::get('', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'index'])
+        ->defaults('_config', [
+            'view' => 'integration-master::admin.exclusion-index',
+        ])->name('admin.integration.master.exclusion-list');
+
+    Route::get('edit/{hash}', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'edit'])
+        ->defaults('_config', [
+            'view' => 'integration-master::admin.integration-master.edit',
+        ])
+        ->name('admin.integration.master.edit-exclusion-list');
+
+    Route::delete('delete', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'delete'])
+        ->name('admin.integration.master.delete-exclusion-list');
+
+    Route::post('create', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'create'])
+        ->name('admin.integration.master.create-exclusion-list');
+
+    Route::post('update', [\IntegrationHelper\IntegrationMasterLaravel\Controllers\Admin\IntegrationMasterExclusionController::class, 'update'])
+        ->name('admin.integration.master.update-exclusion-list');
+});
