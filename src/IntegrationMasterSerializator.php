@@ -11,7 +11,8 @@ class IntegrationMasterSerializator
     public static function decode(string $data): array
     {
         try {
-            return json_decode(base64_decode($data), true);
+            $value = json_decode(base64_decode($data), true);
+            return $value ? $value : [];
         } catch (\Exception $e) {
             return [];
         }

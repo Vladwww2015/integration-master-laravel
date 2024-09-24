@@ -35,7 +35,7 @@
                 name="entity_type"
                 label="{{ __('Entity Type') }}"
             >
-                @foreach($entityTypes as $entityType)
+                @foreach($entityTypes as $entityType => $sourceModel)
                     <option value="{{$entityType}}">{{$entityType}}</option>
                 @endforeach
             </x-admin::form.control-group.control>
@@ -54,8 +54,8 @@
                 name="external_source_identity"
                 label="{{ __('External Source Identity') }}"
             >
-                @foreach($externalSourceIdentities as $externalSourceIdentity)
-                    <option value="{{$externalSourceIdentity}}">{{$externalSourceIdentity}}</option>
+                @foreach($externalSourceIdentities as $externalSourceIdentity => $name)
+                    <option value="{{$externalSourceIdentity}}">{{$name}}</option>
                 @endforeach
             </x-admin::form.control-group.control>
 

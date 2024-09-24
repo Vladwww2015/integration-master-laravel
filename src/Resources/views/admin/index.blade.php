@@ -10,7 +10,7 @@
 
         <div class="flex gap-x-2.5 items-center">
             <div class="flex gap-x-2.5 items-center">
-
+                <a href="{{ route('admin.integration.master.edit', ['hash' => '1']) }}" class="primary-button">{{__('Add')}}</a>
             </div>
         </div>
     </div>

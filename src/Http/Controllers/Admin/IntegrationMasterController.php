@@ -68,10 +68,12 @@ class IntegrationMasterController extends Controller
 
         $url = $integrationMaster ? route('admin.integration.master.update') : route('admin.integration.master.create');
 
-        return response()->json([
+
+        return view($this->_config['view'], [
+            'entityTypes' => IntegrationMasterParamsPool::getInstance()->getEntityTypeSourceModelMap(),
             'integrationMaster' => $integrationMaster,
             'formUrl' => $url,
-            'externalSourceIdentities' => IntegrationMasterParamsPool::getInstance()
+            'externalSourceIdentities' => IntegrationMasterParamsPool::getInstance()->getExternalSourceIdentities()
         ]);
     }
 
