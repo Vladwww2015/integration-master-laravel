@@ -27,6 +27,25 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register(): void
     {
+        $this->registerConfig();
+    }
+
+    /**
+     * Register package config.
+     *
+     * @return void
+     */
+    protected function registerConfig()
+    {
+        $this->mergeConfigFrom(
+            dirname(__DIR__).'/Config/admin-menu.php',
+            'menu.admin'
+        );
+
+        $this->mergeConfigFrom(
+            dirname(__DIR__).'/Config/acl.php',
+            'acl'
+        );
     }
 
 }

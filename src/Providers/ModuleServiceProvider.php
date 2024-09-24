@@ -16,6 +16,5 @@ class ModuleServiceProvider extends BaseModuleServiceProvider
         if ($this->areModelsEnabled()) {
             $this->registerModels();
         }
-
     }
 }
