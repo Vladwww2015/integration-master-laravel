@@ -34,7 +34,7 @@ Route::group([
     'middleware' => ['web', 'admin']
 ], function () {
 
-    Route::get('', [\IntegrationHelper\IntegrationMasterLaravelHttp\Http\Controllers\Admin\IntegrationMasterExclusionController::class, 'index'])
+    Route::get('', [\IntegrationHelper\IntegrationMasterLaravel\Http\Controllers\Admin\IntegrationMasterExclusionController::class, 'index'])
         ->defaults('_config', [
             'view' => 'integration-master::admin.exclusion-index',
         ])->name('admin.integration.master.exclusion-list');
